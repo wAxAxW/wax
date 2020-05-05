@@ -19,9 +19,9 @@ class ListenerApplicationTests {
     @Test
     public void etka() {
         String etka = "N 90942902";
-        log.info("德国备件号:\n{}", etka);
+        log.info("德国备件号:\n{}", etka);//Branch 'tst' set up to track remote branch 'tst' from 'origin'.
         String spa1 = SpaCodeUtils.toSpaCode(etka);
-        
+
         String spa = SpaCodeUtils.toDSERP(etka);
         log.info("国产备件号:\n{}", spa);
         String temp = "N   909 429 02";
