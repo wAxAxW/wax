@@ -1,0 +1,41 @@
+#表名
+tableName: user
+#数据库
+db:
+  driverName: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/my_test?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
+  userName: root
+  passWord: root
+#  报名配置
+package:
+  #  包路径
+  parent: com.example.demo
+  # 模块名
+  module: user
+#  全局配置
+global:
+  #  是否开启 二级缓存
+  enableCache: boolean
+  #  作者
+  author: wangaxb
+  swagger2: true
+  open: false
+  #  输出文件目录
+  outputDir: /src/main/java
+  #  kotlin: boolean
+  #  是否开启swagger2
+#  activeRecord: boolean
+#  baseResultMap: boolean
+#  dateType: DateType
+#  baseColumnList: boolean
+#  entityName: String
+#  mapperName: String
+#  xmlName: String
+#  serviceName: String
+#  serviceImplName: String
+#  controllerName: String
+#  idType: IdType
+
+
+
+

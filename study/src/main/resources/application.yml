@@ -1,0 +1,46 @@
+#      服务端口
+server:
+  port: 8078
+spring:
+  application:
+    name:
+  #  数据源
+  datasource:
+    name: druidDataSource
+    # 主数据源，默认的
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/my_test?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
+    max-active: 100
+    initial-size: 20
+    max-wait: 60000
+    min-idle: 10
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    validation-query: select 'x'
+    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+
+
+  groovy:
+    template:
+      check-template-location: false
+      # mybatis plus 配置
+mybatis-plus:
+  #  xml文件路径
+  mapper-locations: classpath:mapper/*.xml
+  #  MyBaits 别名包扫描路径
+  typeAliasesPackage: com.example.demo.pojo.vo
+  #  枚举类 扫描路径
+  typeEnumsPackage: com.example.demo.enum
+  #  是否开启自动驼峰命名规则（camel case）映射
+  mapUnderscoreToCamelCase: true
+  #  指定当结果集中值为 null 的时候是否调用映射对象的 Setter（Map 对象时为 put）方法
+  callSettersOnNulls: false
+
+
+
+
